@@ -18,9 +18,49 @@ namespace RockPaperScissorsLizardSpock
             this.score = 0;
             
         }
-        public void ChooseGesture()
+        public void ChooseGesture() //Player Choose Gesture to Win the Game 
+        {
+            string gestures;
+            Console.WriteLine("What is your name?");
+            userName = Console.ReadLine();
+            base.gestures = new Gesture(userName);
+            Player2 = new AI(userInput);
+
+            Console.WriteLine("Choose Gesture to Play Game\n");
+            string Gesture = Console.ReadLine();
+            chosenGesture = new chosenGesture("");
+
+            switch (Gesture)
+            {
+                case "RocK":
+                    Console.WriteLine("Rock Beats Scissors && Lizard");
+                    break;
+                case "Paper":
+                    Console.WriteLine("Paper Beats Rock && Spock");
+                    break;
+                case "Scissors":
+                    Console.WriteLine("Scissors Beats Paper && Lizard");
+                    break;
+                case "Lizard":
+                    Console.WriteLine("Lizard Beats Paper && Spock");
+                    break;
+                case "Spock":
+                    Console.WriteLine("Spock Beats Scissors and Rock");
+                    break;
+                default:
+                    Console.WriteLine("Tie");
+                    break;
+            }
+        }
+
+
+    public override void ChooseGesture()
         {
             Console.WriteLine("Player Pick Gesture");
+
+
+
+            chosenGesture = "rock";
         }
     }
 }

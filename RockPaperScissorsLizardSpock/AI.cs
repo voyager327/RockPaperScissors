@@ -19,9 +19,12 @@ namespace RockPaperScissorsLizardSpock
 
             this.score = 0;
         }
-        public void ChooseGesture()
+        public override void ChooseGesture()
         {
             Console.WriteLine("AI Randomly Chose Gesture");
+
+
+
         }
 
     }

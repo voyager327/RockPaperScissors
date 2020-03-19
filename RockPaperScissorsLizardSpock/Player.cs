@@ -12,7 +12,7 @@ namespace RockPaperScissorsLizardSpock
         public string playerName;
         public int score;
         public List<string> gestures = new List<string>();
-        //public string chosenGesture;
+        public string chosenGesture;
 
         //Constructorsplayer;
 
@@ -25,7 +25,7 @@ namespace RockPaperScissorsLizardSpock
             gestures.Add("Spock");
 
         }   //Member can DO the following
-        public void ChooseGestures()
+        public virtual void ChooseGesture()
         {
            Console.WriteLine("Select Gestures");
         }
