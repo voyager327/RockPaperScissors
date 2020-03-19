@@ -8,6 +8,7 @@ namespace RockPaperScissorsLizardSpock
 {
     public class GameTime
     {
+
         // member variables (HAS A)
         Player Player1;
         Player Player2;
@@ -24,16 +25,16 @@ namespace RockPaperScissorsLizardSpock
             gestures.Add("Spock");
 
         }
-        public void DisplayRules()
+
+        public void RunGame()
         {
-            Console.WriteLine("Human Player Will Select Gesture while AI Player Will Run Random to Select Gesture");
-            Console.WriteLine("Rock Beat Scissors and Lizard");
-            Console.WriteLine("Paper Beat Rock and Spock");
-            Console.WriteLine("Scissor Beat Paper and Lizard");
-            Console.WriteLine("Lizard Beat Paper and Spock");
-            Console.WriteLine("Spock Beat Scissor and Rock");
-            Console.ReadLine();
+            DisplayRules();
+            GameMode();
+
+
+
         }
+
         public void GameMode() //Player Choses Gesture to Win
         {
             Console.WriteLine("Pick Game Mode. 1 for vs AI, 2 for Vs Human");
@@ -45,7 +46,8 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("What is your name?");
                 userName = Console.ReadLine();
                 Player1 = new Human(userName);
-            }   Player2 = new AI(userInput);
+                Player2 = new AI(userInput);
+            }
             else
             {
                 string userName;
@@ -54,6 +56,17 @@ namespace RockPaperScissorsLizardSpock
                 Player2 = new Human(userName);
             }
         }
+        public void DisplayRules()
+        {
+            Console.WriteLine("Human Player Will Select Gesture while AI Player Will Run Random to Select Gesture");
+            Console.WriteLine("Rock Beat Scissors and Lizard");
+            Console.WriteLine("Paper Beat Rock and Spock");
+            Console.WriteLine("Scissor Beat Paper and Lizard");
+            Console.WriteLine("Lizard Beat Paper and Spock");
+            Console.WriteLine("Spock Beat Scissor and Rock");
+            Console.ReadLine();
+        }
+
         public void ChooseGesture() //Player Choose Gesture to Win the Game 
         {
             Console.WriteLine("Choose Gesture to Play Game\n");
@@ -79,6 +92,7 @@ namespace RockPaperScissorsLizardSpock
                 default:
                     Console.WriteLine("Tie");
                     break;
+
             }
 
         }

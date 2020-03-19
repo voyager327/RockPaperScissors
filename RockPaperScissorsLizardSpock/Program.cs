@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             GameTime sim = new GameTime();
-            GameTime.simulatedGame();
+            sim.RunGame();
                 
         }
     }
