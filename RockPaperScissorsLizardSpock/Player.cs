@@ -11,18 +11,28 @@ namespace RockPaperScissorsLizardSpock
         //Member Variables (HAS 
         public string playerName;
         public int score;
-        public List<string> gestures = new List<string>();
-        public string chosenGesture;
+        public List<string> gestures;
+        public string ChosenGesture;
+        //public List<string> ChosenGesture;
 
         //Constructorsplayer;
 
         public Player()
         {
-            gestures.Add("Rock");
-            gestures.Add("Paper");
-            gestures.Add("Scissors");
-            gestures.Add("Lizard");
-            gestures.Add("Spock");
+            //gestures = new List<string>();
+            //gestures.Add("Rock");
+            //gestures.Add("Paper");
+            //gestures.Add("Scissors");
+            //gestures.Add("Lizard");
+            //gestures.Add("Spock");
+
+            //chosenGesture = new List<string>();
+            //chosenGesture.Add("Rock");
+            //chosenGesture.Add("Paper");
+            //chosenGesture.Add("Scissors");
+            //chosenGesture.Add("Lizard");
+            //chosenGesture.Add("Spock");
+                 
 
         }   //Member can DO the following
         public virtual void ChooseGesture()

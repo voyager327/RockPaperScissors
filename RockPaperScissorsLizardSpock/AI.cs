@@ -19,16 +19,20 @@ namespace RockPaperScissorsLizardSpock
 
             this.score = 0;
         }
-        public override void ChooseGesture()
-        {
-            Console.WriteLine("AI Randomly Chose Gesture");
-
-
-
-        }
-
+           //public override void ChooseGesture()
+             //{
+           //    Console.WriteLine("AI Randomly Choose Gesture");
+           //    Random rnd = new Random();
+           //    {
+           //        var list = new List<string>("Rock,", "Paper", "Scissors", "Lizard", "Spock");
+           //        int index = random.Next(list.Count);
+             //        Console.WriteLine("AI Choose: " + list[index]);
+           //        Console.ReadLine();
+      
+        
     }
 }
+
 
 
 

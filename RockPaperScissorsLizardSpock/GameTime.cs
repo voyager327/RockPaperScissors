@@ -30,17 +30,11 @@ namespace RockPaperScissorsLizardSpock
         {
             DisplayRules();
             GameMode();
-
-            
-            
-            //if(Player1.chosenGesture == "Rock" && Player2.chosenGesture == "Paper")
-            //{
-            //    // increment player2 score
-            //}
+            ChosenGesture();
 
         }
 
-        public void GameMode() //Player Choses Gesture to Win
+        public void GameMode() 
         {
             Console.WriteLine("Pick Game Mode. 1 for vs AI, 2 for Vs Human");
             string userInput = Console.ReadLine();
@@ -101,45 +95,46 @@ namespace RockPaperScissorsLizardSpock
         //}
         public void ChosenGesture() // Chosen Determines winner
         {
-            if (Player1.chosenGesture == "Rock" && Player2.chosenGesture == "Scissors" || Player2.chosenGesture ==  "Lizard")
+            if (Player1.ChosenGesture == "Rock" && Player2.ChosenGesture == "Scissors" || Player2.ChosenGesture == "Lizard")
             {
                 Player1.score++;
-                Console.WriteLine("Player 1 Wins the Round");
-                Console.WriteLine("Player 1 score is" + Player1.score);
+                Console.WriteLine("Player1 Wins the Round");
+                Console.WriteLine("Player1 score is" + Player1.score);
                 Console.ReadLine();
             }
-            else if (Player1.chosenGesture == "Paper" && Player2.chosenGesture == "Rock || Spock")
+            else if (Player1.ChosenGesture == "Paper" && Player2.ChosenGesture == "Rock" || Player2.ChosenGesture == "Spock")
             {
                 Player1.score++;
-                Console.WriteLine("Player 1 Wins the Round");
-                Console.WriteLine("Player 1 score is" + Player1.score);
+                Console.WriteLine("Player1 Wins the Round");
+                Console.WriteLine("Player1 score is" + Player1.score);
                 Console.ReadLine();
             }
-            else if (Player1.chosenGesture == "Scissors" && Player2.chosenGesture == "Paper || Lizard")
+            else if (Player1.ChosenGesture == "Scissors" && Player2.ChosenGesture == "Paper" || Player2.ChosenGesture == "Lizard")
             {
                 Player1.score++;
-                Console.WriteLine("Player 1 Wins the Round");
-                Console.WriteLine("Player 1 score is" + Player1.score);
+                Console.WriteLine("Player1 Wins the Round");
+                Console.WriteLine("Player1 score is" + Player1.score);
                 Console.ReadLine();
             }
-            else if (Player1.chosenGesture == "Lizard" && Player2.chosenGesture == "Paper || Spock")
+            else if (Player1.ChosenGesture == "Lizard" && Player2.ChosenGesture == "Paper" || Player2.ChosenGesture == "Spock")
             {
                 Player1.score++;
-                Console.WriteLine("Player 1 Wins the Round");
-                Console.WriteLine("Player 1 score is" + Player1.score);
+                Console.WriteLine("Player1 Wins the Round");
+                Console.WriteLine("Player1 score is" + Player1.score);
                 Console.ReadLine();
             }
-            else if (Player1.chosenGesture == "Spock" && Player2.chosenGesture == "Scissors || Rock")
+            else if (Player1.ChosenGesture == "Spock" && Player2.ChosenGesture == "Scissors" || Player2.ChosenGesture == "Rock")
             {
                 Player1.score++;
-                Console.WriteLine("Player 1 Wins the Round");
-                Console.WriteLine("Player 1 score is" + Player1.score);
+                Console.WriteLine("Player1 Wins the Round");
+                Console.WriteLine("Player1 score is" + Player1.score);
                 Console.ReadLine();
             }
 
-
-
-             
+        }
+        public void CompareGesture(int Player1, int Player2)
+        {
+                            
         }
     }
 }
