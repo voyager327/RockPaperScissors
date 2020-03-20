@@ -17,9 +17,9 @@ namespace RockPaperScissorsLizardSpock
             this.playerName = player;
             this.score = 0;
 
-        }
-        public void RunGame()
-        {
+        
+        
+        
 
             ChooseGesture();
           //public override void ChooseGesture() //Player Choose Gesture to Win the Game 
@@ -50,7 +50,7 @@ namespace RockPaperScissorsLizardSpock
             //    chosenGesture chosenGesture4 = new chosenGesture("Lizard");
             //    chosenGesture chosenGesture5 = new chosenGesture("Spock");
 
-            //    gestures[0] = chosenGesture1;
+            //    chosenGesture[0] = chosenGesture1;
             //    chosenGesture[1] = chosenGesture1;
             //    chosenGesture[2] = chosenGesture2;
             //    chosenGesture[3] = chosenGesture3;
@@ -58,34 +58,37 @@ namespace RockPaperScissorsLizardSpock
         }
         public override void ChooseGesture() //Player Choose Gesture to Win the Game 
         {
-            string[] ChooseGestureArray = { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
-            ChooseGestureArray[1] = "Rock";
-            ChooseGestureArray[2] = "Paper";
-            ChooseGestureArray[3] = "Scissors";
-            ChooseGestureArray[4] = "Lizard";
-            ChooseGestureArray[5] = "Spock";
-            Console.WriteLine();
-            
-            //Console.WriteLine("Choose Gesture to Play Game.\n1) Rock\n2 Paper\n3) Scissors\n4) Lizard\n5) Spock");
-            //int choice = Convert.ToInt32(Console.ReadLine());
-            ////ChosenGesture = ChosenGesture.ToLower();
-            //switch (choice)
-            //{
-            //    case 1:
-            //        break;
-            //    case 2:
-            //        break;
-            //    case 3:
-            //        break;
-            //    case 4:
-            //        break;
-            //    case 5:
-            //        break;
-            //    default:
-            //        break;
-            //}
-            //return;
- 
+            //string[] ChooseGestureArray = { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
+            //ChooseGestureArray[0] = "Rock";
+            //ChooseGestureArray[1] = "Paper";
+            //ChooseGestureArray[2] = "Scissors";
+            //ChooseGestureArray[3] = "Lizard";
+            //ChooseGestureArray[4] = "Spock";
+            //Console.WriteLine("Pick Gesture to Play");
+            //Console.ReadLine();
+
+
+            Console.WriteLine("Choose Gesture to Play Game.\n1) Rock\n2 Paper\n3) Scissors\n4) Lizard\n5) Spock");
+            int choice = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Pick your Gesture");
+            //ChosenGesture = ChosenGesture.ToLower();
+            switch (choice)
+            {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                default:
+                    break;
+            }
+            return;
+
         }
     } 
 }     

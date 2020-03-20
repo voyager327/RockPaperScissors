@@ -19,12 +19,12 @@ namespace RockPaperScissorsLizardSpock
 
         public Player()
         {
-            //gestures = new List<string>();
-            //gestures.Add("Rock");
-            //gestures.Add("Paper");
-            //gestures.Add("Scissors");
-            //gestures.Add("Lizard");
-            //gestures.Add("Spock");
+            gestures = new List<string>();
+            gestures.Add("Rock");
+            gestures.Add("Paper");
+            gestures.Add("Scissors");
+            gestures.Add("Lizard");
+            gestures.Add("Spock");
 
             //chosenGesture = new List<string>();
             //chosenGesture.Add("Rock");
@@ -32,7 +32,7 @@ namespace RockPaperScissorsLizardSpock
             //chosenGesture.Add("Scissors");
             //chosenGesture.Add("Lizard");
             //chosenGesture.Add("Spock");
-                 
+
 
         }   //Member can DO the following
         public virtual void ChooseGesture()

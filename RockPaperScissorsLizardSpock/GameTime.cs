@@ -12,29 +12,22 @@ namespace RockPaperScissorsLizardSpock
         // member variables (HAS A)
         Player Player1;
         Player Player2;
+        public List<string> gestures;
         string Gesture;
-        List<string> gestures = new List<string>();
+        List<string> ChosenGesture = new List<string>();
 
         // constructor 
         public GameTime()
         {
-            gestures.Add("Rock");
-            gestures.Add("Paper");
-            gestures.Add("Scissors");
-            gestures.Add("Lizard");
-            gestures.Add("Spock");
+            ChosenGesture.Add("Rock");
+            ChosenGesture.Add("Paper");
+            ChosenGesture.Add("Scissors");
+            ChosenGesture.Add("Lizard");
+            ChosenGesture.Add("Spock");
 
         }
 
-        public void RunGame()
-        {
-            DisplayRules();
-            GameMode();
-            ChosenGesture();
-
-        }
-
-        public void GameMode() 
+        public void GameMode()
         {
             Console.WriteLine("Pick Game Mode. 1 for vs AI, 2 for Vs Human");
             string userInput = Console.ReadLine();
@@ -44,8 +37,8 @@ namespace RockPaperScissorsLizardSpock
                 string userName;
                 Console.WriteLine("What is your name?");
                 userName = Console.ReadLine();
-                Player1 = new Human(userName);
-                Player2 = new AI(userInput);
+                Player1 = new Human("Player");
+                Player2 = new AI("Player");
             }
             else
             {
@@ -93,7 +86,7 @@ namespace RockPaperScissorsLizardSpock
         //            break;
         //    }
         //}
-        public void ChosenGesture() // Chosen Determines winner
+        public void chosenGesture() // Chosen Determines winner
         {
             if (Player1.ChosenGesture == "Rock" && Player2.ChosenGesture == "Scissors" || Player2.ChosenGesture == "Lizard")
             {
@@ -130,14 +123,25 @@ namespace RockPaperScissorsLizardSpock
                 Console.WriteLine("Player1 score is" + Player1.score);
                 Console.ReadLine();
             }
-
+            else
+            {
+                Console.WriteLine("Tie");
+                Console.ReadLine();
+            }
         }
         public void CompareGesture(int Player1, int Player2)
         {
-                            
+
         }
-    }
-}
+        public void RunGame()
+        {
+            DisplayRules();
+            GameMode();
+            chosenGesture();
+
+        }
+    }       
+}   
 
 
 
