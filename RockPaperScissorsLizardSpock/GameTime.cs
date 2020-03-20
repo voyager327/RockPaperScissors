@@ -13,17 +13,17 @@ namespace RockPaperScissorsLizardSpock
         Player Player1;
         Player Player2;
         public List<string> gestures;
-        string Gesture;
-        List<string> ChosenGesture = new List<string>();
-
+        //string Gesture;
+        public List<string> chosenGesture = new List<string>();
+        
         // constructor 
         public GameTime()
         {
-            ChosenGesture.Add("Rock");
-            ChosenGesture.Add("Paper");
-            ChosenGesture.Add("Scissors");
-            ChosenGesture.Add("Lizard");
-            ChosenGesture.Add("Spock");
+            chosenGesture.Add("Rock");
+            chosenGesture.Add("Paper");
+            chosenGesture.Add("Scissors");
+            chosenGesture.Add("Lizard");
+            chosenGesture.Add("Spock");
 
         }
 
@@ -44,8 +44,8 @@ namespace RockPaperScissorsLizardSpock
             {
                 string userName;
                 userName = Console.ReadLine();
-                Player1 = new Human(userName);
-                Player2 = new Human(userName);
+                Player1 = new Human("Player");
+                Player2 = new Human("Player");
             }
         }
         public void DisplayRules()
@@ -86,62 +86,66 @@ namespace RockPaperScissorsLizardSpock
         //            break;
         //    }
         //}
-        public void chosenGesture() // Chosen Determines winner
+        public void ChosenGesture() // Method don't run
         {
             if (Player1.ChosenGesture == "Rock" && Player2.ChosenGesture == "Scissors" || Player2.ChosenGesture == "Lizard")
             {
                 Player1.score++;
-                Console.WriteLine("Player1 Wins the Round");
+                Console.WriteLine("Player1 Wins");
                 Console.WriteLine("Player1 score is" + Player1.score);
-                Console.ReadLine();
+
             }
             else if (Player1.ChosenGesture == "Paper" && Player2.ChosenGesture == "Rock" || Player2.ChosenGesture == "Spock")
             {
                 Player1.score++;
-                Console.WriteLine("Player1 Wins the Round");
+                Console.WriteLine("Player1 Wins");
                 Console.WriteLine("Player1 score is" + Player1.score);
-                Console.ReadLine();
+
             }
             else if (Player1.ChosenGesture == "Scissors" && Player2.ChosenGesture == "Paper" || Player2.ChosenGesture == "Lizard")
             {
                 Player1.score++;
-                Console.WriteLine("Player1 Wins the Round");
+                Console.WriteLine("Player1 Wins");
                 Console.WriteLine("Player1 score is" + Player1.score);
-                Console.ReadLine();
+
             }
             else if (Player1.ChosenGesture == "Lizard" && Player2.ChosenGesture == "Paper" || Player2.ChosenGesture == "Spock")
             {
                 Player1.score++;
-                Console.WriteLine("Player1 Wins the Round");
+                Console.WriteLine("Player1 Wins");
                 Console.WriteLine("Player1 score is" + Player1.score);
-                Console.ReadLine();
+
             }
             else if (Player1.ChosenGesture == "Spock" && Player2.ChosenGesture == "Scissors" || Player2.ChosenGesture == "Rock")
             {
                 Player1.score++;
-                Console.WriteLine("Player1 Wins the Round");
+                Console.WriteLine("Player1 Wins");
                 Console.WriteLine("Player1 score is" + Player1.score);
-                Console.ReadLine();
+
             }
             else
             {
                 Console.WriteLine("Tie");
-                Console.ReadLine();
+                Console.WriteLine();
             }
-        }
-        public void CompareGesture(int Player1, int Player2)
+
+            }
+        public void DisplayScore(int Player1, int Player2)
         {
+
+
+
 
         }
         public void RunGame()
         {
             DisplayRules();
             GameMode();
-            chosenGesture();
+            ChosenGesture();
 
         }
     }       
-}   
+}  
 
 
 

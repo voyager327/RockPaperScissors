@@ -67,11 +67,10 @@ namespace RockPaperScissorsLizardSpock
             //Console.WriteLine("Pick Gesture to Play");
             //Console.ReadLine();
 
+            //string[] ChooseGesture = new string[4] {"Rock", "Paper", "Scissors", "Lizard", "Spock"};
 
             Console.WriteLine("Choose Gesture to Play Game.\n1) Rock\n2 Paper\n3) Scissors\n4) Lizard\n5) Spock");
-            int choice = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Pick your Gesture");
-            //ChosenGesture = ChosenGesture.ToLower();
+            int choice = Convert.ToInt32(Console.ReadLine()); // Having issues with this 
             switch (choice)
             {
                 case 1:
@@ -86,10 +85,22 @@ namespace RockPaperScissorsLizardSpock
                     break;
                 default:
                     break;
+
+                    //public Dinosaur[] dinosaurs;
+                    
+                    // inosaurs = new Dinosaur[3];
+
+                    //Dinosaur dinosaur1 = new Dinosaur("T-Rex");
+                    //Dinosaur dinosaur2 = new Dinosaur("Raptor");
+                    //Dinosaur dinosaur3 = new Dinosaur("Triceratops");
+
+                    //dinosaurs[0] = dinosaur1;
+                    //dinosaurs[1] = dinosaur2;
+                    //dinosaurs[2] = dinosaur3;
             }
             return;
-
         }
+ 
     } 
 }     
        //public override void ChooseGesture()
@@ -107,12 +118,12 @@ namespace RockPaperScissorsLizardSpock
         
             //foreach(string name)
             //{
-            //    Console.WriteLine(gestures);
-            //    Gesture Rock = new gesture("Rock");
-            //    gesture Paper = new Gesture("Paper");
-            //Gesture Scissors = new Gesture("Scissors");
-            //Gesture Lizard = new Gesture("Lizard");
-            //Gesture Spock = new Gesture("Spock");
+            //Console.WriteLine(gestures);
+            //ChooseGesture Rock = new ChooseGesture("Rock");
+            //ChooseGesture Paper = new ChooseGesture("Paper");
+            //ChooseGesture Scissors = new ChooseGesture("Scissors");
+            //ChooseGesture Lizard = new ChooseGesture("Lizard");
+            //ChooseGesture Spock = new ChooseGesture("Spock");
             
             //Console.WriteLine("Rock, Paper, Scissors, Lizard, Spock");            
             //for (int i = 0; i < gestures.Count; i++) // round
