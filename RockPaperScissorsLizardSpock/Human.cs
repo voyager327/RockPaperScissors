@@ -83,9 +83,7 @@ namespace RockPaperScissorsLizardSpock
                     break;
                 case 5:
                     break;
-                default:
-                    break;
-
+                
                     //public Dinosaur[] dinosaurs;
                     
                     // inosaurs = new Dinosaur[3];
@@ -103,7 +101,8 @@ namespace RockPaperScissorsLizardSpock
  
     } 
 }     
-       //public override void ChooseGesture()
+       
+//public override void ChooseGesture()
         //{
             //Console.WriteLine("Player Pick Gesture");
 

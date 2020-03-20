@@ -46,6 +46,7 @@ namespace RockPaperScissorsLizardSpock
                 userName = Console.ReadLine();
                 Player1 = new Human("Player");
                 Player2 = new Human("Player");
+                Console.ReadLine();
             }
         }
         public void DisplayRules()
@@ -56,37 +57,10 @@ namespace RockPaperScissorsLizardSpock
             Console.WriteLine("Scissor Beat Paper and Lizard");
             Console.WriteLine("Lizard Beat Paper and Spock");
             Console.WriteLine("Spock Beat Scissor and Rock");
-            Console.ReadLine();
+            
         }
-
-        //public void ChooseGesture() //Player Choose Gesture to Win the Game 
-        //{
-        //    Console.WriteLine("Choose Gesture to Play Game\n");
-        //    string Gesture = Console.ReadLine();
-
-        //    switch (Gesture)
-        //    {
-        //        case "RocK":
-        //            Console.WriteLine("Rock Beats Scissors && Lizard");
-        //            break;
-        //        case "Paper":
-        //            Console.WriteLine("Paper Beats Rock && Spock");
-        //            break;
-        //        case "Scissors":
-        //            Console.WriteLine("Scissors Beats Paper && Lizard");
-        //            break;
-        //        case "Lizard":
-        //            Console.WriteLine("Lizard Beats Paper && Spock");
-        //            break;
-        //        case "Spock":
-        //            Console.WriteLine("Spock Beats Scissors and Rock");
-        //            break;
-        //        default:
-        //            Console.WriteLine("Tie");
-        //            break;
-        //    }
-        //}
-        public void ChosenGesture() // Method don't run
+ 
+        public void ChosenGesture() // This Method don't run
         {
             if (Player1.ChosenGesture == "Rock" && Player2.ChosenGesture == "Scissors" || Player2.ChosenGesture == "Lizard")
             {
@@ -121,14 +95,14 @@ namespace RockPaperScissorsLizardSpock
                 Player1.score++;
                 Console.WriteLine("Player1 Wins");
                 Console.WriteLine("Player1 score is" + Player1.score);
-
+                
             }
             else
             {
                 Console.WriteLine("Tie");
-                Console.WriteLine();
+                Console.ReadLine();
             }
-
+           
             }
         public void DisplayScore(int Player1, int Player2)
         {
@@ -142,12 +116,42 @@ namespace RockPaperScissorsLizardSpock
             DisplayRules();
             GameMode();
             ChosenGesture();
-
+            
         }
     }       
-}  
+}
 
+//}
+////public void ChooseGesture() //Player Choose Gesture to Win the Game 
+//{
+//    Console.WriteLine("Choose Gesture to Play Game.\n1) Rock\n2 Paper\n3) Scissors\n4) Lizard\n5) Spock");
+//    int choice = Convert.ToInt32(Console.ReadLine()); // Having issues with this 
+//    switch (choice)
+//    {
+//        case 1:
+//            break;
+//        case 2:
+//            break;
+//        case 3:
+//            break;
+//        case 4:
+//            break;
+//        case 5:
+//            break;
 
+//            //public Dinosaur[] dinosaurs;
+
+//            // inosaurs = new Dinosaur[3];
+
+//            //Dinosaur dinosaur1 = new Dinosaur("T-Rex");
+//            //Dinosaur dinosaur2 = new Dinosaur("Raptor");
+//            //Dinosaur dinosaur3 = new Dinosaur("Triceratops");
+
+//            //dinosaurs[0] = dinosaur1;
+//            //dinosaurs[1] = dinosaur2;
+//            //dinosaurs[2] = dinosaur3;
+//    }
+//    return;
 
 //public void RunGame()
 //{
